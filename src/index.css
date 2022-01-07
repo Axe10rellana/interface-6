@@ -1,0 +1,284 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --font: "Roboto", sans-serif;
+}
+
+/* RESET */
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+[id] {
+  scroll-margin-top: 2ex;
+}
+
+/* estilos de la pagina */
+/*header*/
+.header {
+  background-color: #ddd;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header__right i {
+  margin-right: 1rem;
+}
+
+.header__right a {
+  text-decoration: none;
+  color: #777;
+}
+
+.header__right a:hover {
+  color: #16a5a5;
+}
+
+/*main*/
+.main {
+  flex-grow: 1;
+}
+
+.new__letters {
+  background-color: #15c5c5;
+  color: #ffffff;
+  width: 100%;
+  padding: 3rem;
+  text-align: center;
+}
+
+.new__letters h2 {
+  margin-bottom: 1rem;
+}
+
+.new__letters p {
+  margin-bottom: 1rem;
+}
+
+.new__letters input[type="email"] {
+  width: 90%;
+  padding: 1rem;
+  outline: none;
+}
+
+.new__letters button {
+  width: 10%;
+  padding: 1rem 0;
+  background-color: #16a5a5;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.new__letters button:hover {
+  opacity: 0.75;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+.gallery {
+  columns: 3 200px;
+  column-gap: 0.5rem;
+  margin: 0.5rem;
+}
+
+.gallery__button {
+  padding: 1rem 4rem;
+  color: #16a5a5;
+  font-weight: bold;
+  background-color: #ddd;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery__button:hover {
+  opacity: 0.75;
+}
+
+.card {
+  border: none !important;
+  background-color: #ccc !important;
+}
+
+.card p {
+  color: #16a5a5;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  padding: 3rem 0;
+}
+
+.card__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 50%;
+  border: 1px solid #2626b8;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+/*footer*/
+.footer {
+  background-color: #222;
+  padding: 2rem 1rem;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__top__left input[type="email"] {
+  width: 70%;
+  padding: 1rem;
+  outline: none;
+}
+
+.footer__top__left button {
+  width: 10%;
+  padding: 1rem 0;
+  background-color: #16a5a5;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.footer__top__left button:hover {
+  opacity: 0.75;
+}
+
+.footer__top__left h3,
+.footer__top__right h3 {
+  color: #ffffff;
+}
+
+.footer__top__left p,
+.footer__top__center a,
+.footer__top__right a,
+.footer__bottom p,
+.footer__bottom a {
+  color: #ccc;
+}
+
+.footer__top__center,
+.footer__top__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__top__center a {
+  text-decoration: none;
+}
+
+.footer__top__center a:hover {
+  color: #16a5a5;
+}
+
+.footer__top__right a {
+  text-decoration: none;
+}
+
+.footer__top__right a:hover {
+  color: #16a5a5;
+}
+
+/*footer__bottom*/
+.footer__bottom {
+  color: #ccc;
+  text-align: center;
+}
+
+hr {
+  color: #ccc !important;
+  width: 100%;
+}
+
+.footer__bottom p {
+  margin: 0;
+}
+
+.footer__bottom a {
+  text-decoration: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.footer__bottom a:hover {
+  color: #16a5a5;
+}
+
+@media screen and (max-width: 668px) {
+  .gallery {
+    columns: 1 100%;
+    margin: 0.5rem;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__top__left input[type="email"] {
+    width: 90%;
+  }
+
+  .footer__top__center {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+}
